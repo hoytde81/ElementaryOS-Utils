@@ -20,6 +20,9 @@ apt-get install libc6-i386
 apt-get install qemu-kvm
 adduser $USER kvm
 
+# Install git
+apt-get install git
+
 # Show all system tray icon && remove duplicate wifi
 add-apt-repository ppa:yunnxx/elementary
 apt update
@@ -31,3 +34,7 @@ rm -f /etc/xdg/autostart/nm-applet.desktop
 # use md5 as md5sum
 cd $(dirname $(which md5sum))
 cp md5sum md5
+
+# Beautiful git
+git config --global alias.lg "log --all --decorate --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+
